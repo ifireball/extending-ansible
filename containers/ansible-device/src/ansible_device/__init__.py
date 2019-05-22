@@ -5,6 +5,10 @@ from datetime import datetime
 MSG_LOCATION = '/ansible_messages'
 
 
+class AnsibleDeviceException(Exception):
+    pass
+
+
 def send_message(destination, message):
     """Send a message over the Ansible device
 

@@ -6,3 +6,5 @@ all:
     linux_servers:
       hosts:
         test-host:
+  hosts:
+    ansible-device:

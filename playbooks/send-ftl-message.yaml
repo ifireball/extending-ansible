@@ -1,0 +1,14 @@
+# send-ftl-message.yaml - Example playbook for using the
+#                         ansible_message module
+#
+---
+- hosts: ansible-device
+  gather_facts: no
+  roles:
+    - ansible_message
+  tasks:
+    - name: Message to Earth
+      ansible_message:
+        destination: Earth
+        message: |
+          Hi from Marse!

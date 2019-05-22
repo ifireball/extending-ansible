@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 # Usage example for using the ansible_device module
 #
-from ansible_device import send_message
+from ansible_device import (
+    send_message,
+    AnsibleDeviceException
+)
 
-send_message('Earth', 'Hello world!\n')
+try:
+    send_message(
+        'Earth',
+        'Hello world!\n'
+    )
+except AnsibleDeviceException:
+    print('Failed to send!')
