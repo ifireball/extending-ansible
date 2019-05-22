@@ -1,0 +1,8 @@
+---
+all:
+  vars:
+    ansible_connection: docker
+  children:
+    linux_servers:
+      hosts:
+        test-host:

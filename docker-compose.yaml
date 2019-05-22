@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  test-host:
+    build:
+      context: containers/centos-systemd
+    image: centos-systemd
+    container_name: test-host
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    tty: true
+  ansible-device:
+    depends_on:
+      - test-host
+    build:
+      context: containers/ansible-device
+    container_name: ansible-device
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    tty: true
+

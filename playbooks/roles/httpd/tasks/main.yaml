@@ -1,0 +1,5 @@
+---
+- debug:
+    msg: |
+      This role does not really do anything as it is just an example
+      indicating the existence of roles

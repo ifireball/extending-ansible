@@ -1,0 +1,17 @@
+# example.yaml - An example playbook for running on simple Linux hosts
+#
+---
+- hosts: linux_servers
+  tasks:
+    - name: Create users
+      user:
+        name: "{{ item }}"
+        comment: "{{ item|capitalize }}"
+      loop: ['bob', 'bill', 'william']
+
+    - name: Install HTTPD on web servers
+      include_role:
+        name: httpd
+      when: ansible_facts['hostname'] is
+        match('www')
+
