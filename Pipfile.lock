@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "558572d2e05dc2edfe540109be04071487d2ca192e87a8d49c72e3e48ddb6bb0"
+            "sha256": "bca114388a211b2be52a0b86087a9beed8c5c2a203bab7e6ac51bc2ccec2bec1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -236,6 +236,10 @@
                 "sha256:da6b43a8c9ae93bc80e2739efb38cc776ba74a886e3e9318d65fe81a8b8a2c6e"
             ],
             "version": "==0.4.5"
+        },
+        "pycon-il-2019": {
+            "editable": true,
+            "path": "./src"
         },
         "pycparser": {
             "hashes": [

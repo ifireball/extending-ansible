@@ -1,0 +1,14 @@
+# send-ftl-message-w-action.yaml - Example playbook for using the
+#                                  ansible_message action plugin
+#
+---
+- hosts: ansible-device
+  gather_facts: no
+  roles:
+    - ansible_message
+  tasks:
+    - name: Message to Dune
+      ansible_message:
+        destination: dune
+        message: |
+          Hi from Earth!
