@@ -1,0 +1,14 @@
+# send-ftl-message-w-lokup.yaml - Example playbook for using the
+#                                 planetdb lookup plugin
+#
+---
+- hosts: ansible-device
+  gather_facts: no
+  roles:
+    - ansible_message
+  tasks:
+    - name: Message to Earth
+      ansible_message:
+        destination: "{{ lookup('planetdb', 'terra') }}"
+        message: |
+          Hi from Tatooine!
