@@ -46,7 +46,7 @@ EXAMPLES = '''
 - name: Message to Earth
   ansible_message:
     destination: Earth
-    message: Hi from Marse!
+    message: Hi from Mars!
 '''
 from ansible_device import send_message, AnsibleDeviceException
 

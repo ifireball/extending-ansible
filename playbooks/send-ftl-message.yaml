@@ -11,4 +11,4 @@
       ansible_message:
         destination: Earth
         message: |
-          Hi from Marse!
+          Hi from Mars!
